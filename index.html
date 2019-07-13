@@ -122,7 +122,9 @@
                                           <img src="radiantBotShrine.jpg" class="d-block w-100" alt="...">
                                           <div class="carousel-caption d-none d-md-block">
                                             <h5>Radiant Bottom Shrine</h5>
-                                            <p>Will heal you every 5 minutes. Get ready to get into action. P.S. notify your teammates.</p>
+                                            <p>Will heal you every 5 minutes. Get ready to get into action. P.S. notify your teammates.
+                                              
+                                            </p>
                                           </div>
                                         </div>
                                       </div>
@@ -141,11 +143,26 @@
                     </div>
                     <div class="col-lg-3">
                         <p><h2>Any piece of land you desire, can be yours....</h2></p>
-                        <p>for a reasonable amount of gold</p>
+                        <p>for a reasonable amount of gold
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="myFunction()">
+                            Buy Now
+
+                             </button>
+                        </p>
                         <div class="creeps">
 
                           <img src="creeps.jpg" alt="not found" width="80%">
                         </div>
+                        <div id="myDIV">
+                          
+                             <form id="frm1" action="/action_page.php">
+                              Please fill in your information below: <br>
+                            Username: <input type="text" name="fname"><br>
+                            Phone number: <input type="text" name="lname"><br>
+                            Desired lot: <input type="text" name="lotname"><br>
+                            <input type="button" onclick="Submit()" value="Submit">
+                          </form>
+                          </div>
                     </div>
                 </div>
                 <p>
@@ -205,5 +222,21 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            </body>
+            
+<script>
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  }
+  function Submit() {
+  alert("Your information has been stored. We will contact you soon to discuss the details. Until then, stay alive!")
+  var x = document.getElementById("myDIV");
+  x.style.display = "none";
+}
+  </script>
+</body>
 </html>
